@@ -10,9 +10,9 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class Auth {
+public class Authenticator {
 
-    private final Logger logger = LogManager.getLogger(App.class);
+    private final Logger logger = LogManager.getLogger(Main.class);
 
     public HttpResponse<String> createRequestToken(String accessToken) throws URISyntaxException, IOException, InterruptedException {
 

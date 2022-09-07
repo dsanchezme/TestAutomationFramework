@@ -1,6 +1,7 @@
 # Challenge - Test Automation Framework   
 
-Presenting a test automation framework for [The Movie Database](https://www.themoviedb.org/) - [API Layer](https://developers.themoviedb.org/4/getting-started)
+Test automation framework for [The Movie Database](https://www.themoviedb.org/) - [API Layer](https://developers.themoviedb.org/4/getting-started)
+by _Diego Sanchez_
 
 ### Type 
 **Modular**
@@ -58,7 +59,7 @@ Presenting a test automation framework for [The Movie Database](https://www.them
 ### References
 
 - [Explain modular automation framework](https://www.tutorialspoint.com/explain-modular-automation-framework)
-- [Difference between Gradle and Maven](geeksforgeeks.org/difference-between-gradle-and-maven/)
+- [Difference between Gradle and Maven](https://www.geeksforgeeks.org/difference-between-gradle-and-maven/)
 - [JUnit Setup Maven - JUnit 4 and JUnit 5](https://www.digitalocean.com/community/tutorials/junit-setup-maven)
 - [TestNG vs JUnit: Test case Management in TestNG and JUnit frameworks](https://www.lambdatest.com/blog/testng-vs-junit-which-testing-framework-should-you-choose/)
 - [Gradle vs Maven: Definiciones y diferencias principales](https://www.chakray.com/es/gradle-vs-maven-definiciones-diferencias/)
