@@ -71,3 +71,4 @@ by _Diego Sanchez_
 - [Serialization of Java objects using Jackson Library](https://www.techiedelight.com/serialization-java-objects-jackson-library/)
 - [Google GSON Tutorial](https://www.javaguides.net/p/google-gson-tutorial.html)
 - [JUnit - Overview](https://www.tutorialspoint.com/junit/junit_overview.htm)
+- [dotenv-java dependency](https://github.com/cdimascio/dotenv-java)
