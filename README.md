@@ -19,10 +19,15 @@ Presenting a test automation framework for [The Movie Database](https://www.them
 
 - #### Test runner
   
-  **[TestNG](https://testng.org/doc/)**
- 
+  **[JUnit5]()**
+  - JUnit tests can be organized into test suites containing test cases and even other test suites.
+  - Provides annotations to identify test methods.
+  - JUnit 5 is divided into several modules, you need at least JUnit Platform and JUnit Jupiter to write tests in JUnit 5.
+
+  **[TestNG](https://testng.org/doc/)** 
   - Similar to [JUnit](https://junit.org/junit5/), TestNG provides initialization and cleanup at the method and class level
   - TestNG offers some annotations for configurations at suite and group levels.
+  - JUnit does not support parallel execution of tests, but TestNG does.
 
 - #### Reporting 
 
@@ -54,6 +59,7 @@ Presenting a test automation framework for [The Movie Database](https://www.them
 
 - [Explain modular automation framework](https://www.tutorialspoint.com/explain-modular-automation-framework)
 - [Difference between Gradle and Maven](geeksforgeeks.org/difference-between-gradle-and-maven/)
+- [JUnit Setup Maven - JUnit 4 and JUnit 5](https://www.digitalocean.com/community/tutorials/junit-setup-maven)
 - [TestNG vs JUnit: Test case Management in TestNG and JUnit frameworks](https://www.lambdatest.com/blog/testng-vs-junit-which-testing-framework-should-you-choose/)
 - [Gradle vs Maven: Definiciones y diferencias principales](https://www.chakray.com/es/gradle-vs-maven-definiciones-diferencias/)
 - [A Quick JUnit vs TestNG Comparison](https://www.baeldung.com/junit-vs-testng)
@@ -63,3 +69,4 @@ Presenting a test automation framework for [The Movie Database](https://www.them
 - [Jackson for Java. Is it more than JSON?](https://kodejava.org/jackson-for-java-is-it-more-than-json/)
 - [Serialization of Java objects using Jackson Library](https://www.techiedelight.com/serialization-java-objects-jackson-library/)
 - [Google GSON Tutorial](https://www.javaguides.net/p/google-gson-tutorial.html)
+- [JUnit - Overview](https://www.tutorialspoint.com/junit/junit_overview.htm)
