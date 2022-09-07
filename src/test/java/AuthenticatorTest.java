@@ -13,7 +13,7 @@ class AuthenticatorTest {
     @Test
     @Description("Verifying if a user is able to create a request token with a valid access token")
     public void createRequestTokenSuccess() throws URISyntaxException, IOException, InterruptedException {
-        Authenticator authenticator = new Authenticator();
+        Authenticator authenticator = Authenticator.getInstance();
 
         String accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMTljNTFlZDQyMWZlMzUwMzEwNDViODMzOWI1ZmFkMyIsInN1YiI6IjYyZmNmZWQ1YjViYzIxMDA5MzEwOThmYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3paYzYVdTalVxIxajErFCrZ-MQ_4i-m3P_bxEa7jTPU";
 
@@ -24,7 +24,7 @@ class AuthenticatorTest {
     @Test
     @Description("Verifying if a user is not able to create a request token with an invalid access token")
     public void createRequestTokenFailure() throws URISyntaxException, IOException, InterruptedException {
-        Authenticator authenticator = new Authenticator();
+        Authenticator authenticator = Authenticator.getInstance();
 
         String accessToken = "invalidAccessToken";
 
@@ -35,7 +35,7 @@ class AuthenticatorTest {
     @Test
     @Description("Verifying if the request token can be accessed from create request token response made with a valid token")
     public void getRequestTokenSuccess() throws URISyntaxException, IOException, InterruptedException {
-        Authenticator authenticator = new Authenticator();
+        Authenticator authenticator = Authenticator.getInstance();
         String accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMTljNTFlZDQyMWZlMzUwMzEwNDViODMzOWI1ZmFkMyIsInN1YiI6IjYyZmNmZWQ1YjViYzIxMDA5MzEwOThmYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3paYzYVdTalVxIxajErFCrZ-MQ_4i-m3P_bxEa7jTPU";
 
         String requestToken = authenticator.getRequestToken(accessToken);
@@ -45,7 +45,7 @@ class AuthenticatorTest {
     @Test
     @Description("Verifying if the request token cannot be accessed from create request token response made with an invalid token")
     public void getRequestTokenFailure() throws URISyntaxException, IOException, InterruptedException {
-        Authenticator authenticator = new Authenticator();
+        Authenticator authenticator = Authenticator.getInstance();
         String accessToken = "invalidAccessToken";
 
         String requestToken = authenticator.getRequestToken(accessToken);

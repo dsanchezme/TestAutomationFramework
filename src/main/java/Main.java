@@ -13,7 +13,7 @@ public class Main {
 
         Configurator.setLevel(logger.getName(), Level.DEBUG);
 
-        Authenticator authenticator = new Authenticator();
+        Authenticator authenticator = Authenticator.getInstance();
         String accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMTljNTFlZDQyMWZlMzUwMzEwNDViODMzOWI1ZmFkMyIsInN1YiI6IjYyZmNmZWQ1YjViYzIxMDA5MzEwOThmYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3paYzYVdTalVxIxajErFCrZ-MQ_4i-m3P_bxEa7jTPU";
         String requestToken = authenticator.getRequestToken(accessToken);
         logger.info("Request Token: "+requestToken);

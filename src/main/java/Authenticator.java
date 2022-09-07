@@ -12,7 +12,17 @@ import java.net.http.HttpResponse;
 
 public class Authenticator {
 
+    private static Authenticator uniqueInstance;
     private final Logger logger = LogManager.getLogger(Main.class);
+
+    private Authenticator(){}
+
+    public static Authenticator getInstance(){
+        if (uniqueInstance == null){
+            uniqueInstance = new Authenticator();
+        }
+        return uniqueInstance;
+    }
 
     public HttpResponse<String> createRequestToken(String accessToken) throws URISyntaxException, IOException, InterruptedException {
 
