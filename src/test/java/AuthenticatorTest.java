@@ -60,4 +60,17 @@ class AuthenticatorTest {
         String requestToken = authenticator.getRequestToken(apiKey, apiReadAccessToken);
         assertNull(requestToken);
     }
+
+    @Test
+    @Description("Verifying if the access token cannot be accessed when a request token has not been approved")
+    public void getAccessTokenFailure() throws URISyntaxException, IOException, InterruptedException {
+        Authenticator authenticator = Authenticator.getInstance();
+
+        String apiKey = dotenv.get("API_KEY");
+        String apiReadAccessToken = dotenv.get("API_READ_ACCESS_TOKEN");
+        String requestToken = authenticator.getRequestToken(apiKey, apiReadAccessToken);
+
+        String accessToken = authenticator.getAccessToken(apiKey, apiReadAccessToken, requestToken);
+        assertNull(accessToken);
+    }
 }

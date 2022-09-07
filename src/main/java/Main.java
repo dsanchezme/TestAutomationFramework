@@ -23,6 +23,7 @@ public class Main {
         String requestToken = authenticator.getRequestToken(apiKey, apiReadAccessToken);
         logger.info("Request Token: "+requestToken);
 
-
+        String accessToken = authenticator.getAccessToken(apiKey, apiReadAccessToken, requestToken);
+        logger.info("Access Token: " + accessToken);
     }
 }
