@@ -24,16 +24,16 @@ public class Authenticator {
         return uniqueInstance;
     }
 
-    public HttpResponse<String> createRequestToken(String accessToken) throws URISyntaxException, IOException, InterruptedException {
+    public HttpResponse<String> createRequestToken(String apiKey, String apiReadAccessToken) throws URISyntaxException, IOException, InterruptedException {
 
         logger.debug("Creating a request token");
 
-        String requestURL = "https://api.themoviedb.org/4/auth/request_token";
+        String requestURL = "https://api.themoviedb.org/4/auth/request_token?api_key="+apiKey;
 
         HttpClient httpClient = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()
-                .header("Authorization", "Bearer "+accessToken)
+                .header("Authorization", "Bearer "+apiReadAccessToken)
                 .uri(new URI(requestURL))
                 .POST(HttpRequest.BodyPublishers.noBody())
                 .build();
@@ -41,9 +41,9 @@ public class Authenticator {
         return httpClient.send(request, HttpResponse.BodyHandlers.ofString());
     }
 
-    public String getRequestToken(String accessToken) throws URISyntaxException, IOException, InterruptedException {
+    public String getRequestToken(String apiKey, String apiReadAccessToken) throws URISyntaxException, IOException, InterruptedException {
 
-        String createRequestTokenResponse = createRequestToken(accessToken).body();
+        String createRequestTokenResponse = createRequestToken(apiKey, apiReadAccessToken).body();
         JsonObject responseAsJson = new Gson().fromJson(createRequestTokenResponse, JsonObject.class);
 
         logger.debug("Getting request token from response");
